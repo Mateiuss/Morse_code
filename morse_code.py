@@ -8,9 +8,8 @@ def translateToMorse(codes, msg):
     tmpMsg = ""
     for letter in msg:
         for code in codes:
-            #print("{} {}".format(code.ltr, code.code))
             if letter == code.ltr:
-                tmpMsg = tmpMsg + code.code
+                tmpMsg = tmpMsg + code.code + "/"
                 break
     return tmpMsg
 
@@ -45,6 +44,26 @@ codes.append(morseCode("x", "-..-"))
 codes.append(morseCode("y", "-.--"))
 codes.append(morseCode("z", "--.."))
 codes.append(morseCode(" ", " "))
+codes.append(morseCode("1", ".----"))
+codes.append(morseCode("2", "..---"))
+codes.append(morseCode("3", "...--"))
+codes.append(morseCode("4", "....-"))
+codes.append(morseCode("5", "....."))
+codes.append(morseCode("6", "-...."))
+codes.append(morseCode("7", "--..."))
+codes.append(morseCode("8", "---.."))
+codes.append(morseCode("9", "----."))
+codes.append(morseCode("0", "-----"))
+codes.append(morseCode("?", "..--.."))
+codes.append(morseCode("!", "-.-.--"))
+codes.append(morseCode(".", ".-.-.-"))
+codes.append(morseCode(",", "--..--"))
+codes.append(morseCode(";", "-.-.-."))
+codes.append(morseCode(":", "---..."))
+codes.append(morseCode("+", ".-.-."))
+codes.append(morseCode("-", "-....-"))
+codes.append(morseCode("/", "-..-."))
+codes.append(morseCode("=", "-...-"))
 
 # Reading the text from keyboard
 msg = input("Please enter the message you want to send:\n")
